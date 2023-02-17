@@ -1,19 +1,30 @@
 import * as React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
-import theme, { roboto } from '../src/theme';
+import theme from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
+import googleFontString from '../src/components/helpers/googleFontString';
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en" className={roboto.className}>
+      <Html lang="en">
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="shortcut icon" href="/favicon.ico" />
           <meta name="emotion-insertion-point" content="" />
           {(this.props as any).emotionStyleTags}
+
+
+          {/* dangerouslySetInnerHTML to inline CSS @font-face */}
+          {/* Embed Google fonts as base64 strings */}
+          <style
+            key="custom-fonts"
+            dangerouslySetInnerHTML={{
+              __html: googleFontString,
+            }}
+          />
         </Head>
         <body>
           <Main />
