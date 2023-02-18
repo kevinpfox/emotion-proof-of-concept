@@ -1,5 +1,5 @@
 
-Refactor, search replace...
+Refactor is easy, search replace...
 ```
 import styled from 'styled-components';
 ```
@@ -12,6 +12,9 @@ This part stays the same:
 ```
 const StyledMain = styled.main<{ genderIconPath: string }>`
 ```
+
+Existing expressions within template literals will "just work".
+
 
 On run, matches expectaions for server -> client render...
 
