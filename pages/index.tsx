@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import styled from '@emotion/styled'
-import Container from '@mui/material/Container';
+import Link from "next/link";
+import styled from "@emotion/styled";
+import Container from "@mui/material/Container";
 
 const StyledMain = styled.main`
   max-width: 800px;
@@ -9,7 +9,7 @@ const StyledMain = styled.main`
   }
 `;
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <StyledMain>
       <Container maxWidth="lg">
@@ -18,4 +18,6 @@ export default function Home() {
       </Container>
     </StyledMain>
   );
-}
+};
+
+export default Home;

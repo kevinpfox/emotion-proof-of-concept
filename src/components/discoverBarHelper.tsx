@@ -5,22 +5,22 @@
 
 // Three possible tabs
 export enum DiscoveryBarValues {
-  Home = 'home',
-  Discover = 'discover',
-  Groups = 'groups',
-  MyActivity = 'myActivity',
-  MyBookmarks = 'myBookmarks',
-  None = '',
+  Home = "home",
+  Discover = "discover",
+  Groups = "groups",
+  MyActivity = "myActivity",
+  MyBookmarks = "myBookmarks",
+  None = "",
 }
 
 // Bar used within 4 templates
 export enum DiscoveryBarPaths {
-  Home = '/',
-  Discover = '/groups',
-  GroupPage = '/groups/[group_id]/[group_title]',
-  MyGroups = '/my-profile/groups',
-  MyActivity = '/my-activity',
-  MyBookmarks = '/my-bookmarks',
+  Home = "/",
+  Discover = "/groups",
+  GroupPage = "/groups/[group_id]/[group_title]",
+  MyGroups = "/my-profile/groups",
+  MyActivity = "/my-activity",
+  MyBookmarks = "/my-bookmarks",
 }
 
 export const getDiscoveryBarValue = (url: string): DiscoveryBarValues => {
@@ -42,7 +42,9 @@ export const getDiscoveryBarValue = (url: string): DiscoveryBarValues => {
   }
 };
 
-export const getDiscoveryBarPath = (value: DiscoveryBarValues): DiscoveryBarPaths => {
+export const getDiscoveryBarPath = (
+  value: DiscoveryBarValues
+): DiscoveryBarPaths => {
   switch (value) {
     case DiscoveryBarValues.Groups:
       return DiscoveryBarPaths.MyGroups;

@@ -1,11 +1,13 @@
-import React from 'react';
-import styled from '@emotion/styled'
-import Tab from '@mui/material/Tab';
-import a11yTabProps from './helpers/a11yTabProps';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+import React from "react";
+import styled from "@emotion/styled";
+import Tab from "@mui/material/Tab";
+import a11yTabProps from "./helpers/a11yTabProps";
 
 const StyledTab = styled(Tab)<{ something: string }>`
-  border: 1px solid  ${({ something }): string => something};
-`
+  border: 1px solid ${({ something }): string => something};
+`;
 
 interface LinkTabProps {
   idx: number;
